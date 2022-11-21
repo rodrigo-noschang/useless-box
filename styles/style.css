@@ -1,0 +1,122 @@
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sitck-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.stick-base {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: grey;
+    height: 150px;
+    width: 350px;
+    border-radius: 20px;
+    transform: rotateX(50deg) translate(-50%, -50%);
+    display:flex;
+    align-items: center;
+    z-index: 2;
+    border: 2px solid black;
+}
+
+.stick-base::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background-color: black;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 50%;
+    transform: rotateX(-50deg);
+}
+
+.stick-rail {
+    width: 70%;
+    height: 40%;
+    background-color: black;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+}
+
+.stick-rail::before {
+    content: 'ON';
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    left: -42px;
+    top: 20px;
+}
+
+.stick-rail::after {
+    content: 'OFF';
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    right: -50px;
+    top: 20px;
+}
+
+.stick {
+    width: 30px;
+    height: 150px;
+    background-color: black;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-top: 30px solid red;
+    box-sizing: content-box;
+    transition: transform .4s;
+    box-shadow: 0 0 5px 0 #000;
+}
+
+.stick:hover {
+    cursor: pointer;
+}
+
+.led {
+    width: 24px;
+    height: 24px;
+    background-color: #921212;
+    bottom: 22px;
+    left: 14px;
+    position: absolute;
+    border-radius: 50% 50% 4px 4px;
+}
+
+.led-turn-on {
+    background-color: red;
+    box-shadow: 0 0 14px 0 red;
+}
+
+.stick-off {
+    transform: translateX(100%) rotateZ(30deg);
+    transition: .4s;
+}
+
+.stick-on {
+    transform: translateX(-150%) rotateZ(-30deg);
+    transition: .4s;
+}
+
+.stick-base-depth {
+    height: 200px;
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotateX(50deg) translate(-50%, -44%);
+    z-index: 1;
+    border-radius: 20px;
+    background-color: grey;
+    border: 2px solid black;
+}
