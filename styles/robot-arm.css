@@ -1,0 +1,72 @@
+/* ============== Animations =============== */
+@keyframes pullArm {
+    0%, 100% {
+        transform: translateX(0px); 
+    }
+
+    75% {
+        transform: translateX(100px);
+    }
+}
+
+/* ============= Robot Arm ========== */
+
+.articulation {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    border: 2px solid black;
+    left: 100%;
+    top: 30px;
+    border-radius: 0 4px 4px 0;
+    background-color: #bbb;
+}
+
+.hand {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 12px;
+    left: calc(100% + 102px);
+}
+
+.hand-part {
+    width: 25px;
+    height: 10px;
+    background-color: #bbb;
+    position: absolute;
+    top: 50%;
+    transform-origin: left;
+}
+
+.top-hand-part {
+    transform: rotateZ(-45deg);
+}
+
+.top-hand-part::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    background-color: #bbb;
+    left: 19px;
+    top: 7px;
+    transform: rotateZ(45deg);
+}
+
+.bottom-hand-part { 
+    transform: rotateZ(45deg);
+}
+
+.bottom-hand-part::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    background-color: #bbb;
+    transform: rotateZ(-45deg);
+    left: 19px;
+    bottom: 8px;
+}

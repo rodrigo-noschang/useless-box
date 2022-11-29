@@ -1,3 +1,5 @@
+/* ============= Robot Body =========== */
+
 .robot-body {
     width: 160px;
     height: 160px;
@@ -5,6 +7,7 @@
     border: 2px solid black;
     margin: -2px auto 0;
     padding: 35px 30px 0;
+    position: relative;
 }
 
 .chest-piece, .smaller-chest-piece {
