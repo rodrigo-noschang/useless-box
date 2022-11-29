@@ -1,0 +1,104 @@
+.robot {
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+/* ========== Robot Head =========== */
+
+.robot-head {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #bbb;
+}
+
+.anthena {
+    width: 100px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    transform-origin: right;
+    left: -50%;
+    top: 0;
+}
+
+.anthena::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+    background-color: red;
+    border-radius: 15px;
+}
+
+.left-anthena {
+    transform: rotateZ(45deg);
+}
+
+.right-anthena {
+    transform: rotateZ(135deg);
+}
+
+.eye-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eye {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+}
+
+/* .eye::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+} */
+
+.mouth {
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.top-teeth, .bottom-teeth {
+    height: 15px;
+    display: flex;
+}
+
+.top-teeth {
+    border-bottom: 2px solid black;
+}
+
+.teeth {
+    width: calc(100% / 3);
+    border-right: 2px solid black;
+}
+
+.teeth:last-of-type {
+    border-right: none;
+}

@@ -6,8 +6,6 @@ const joyStick = {
     switches: 0
 }
 
-
-
 const turnOn = () => {
     stickDOMelement.classList.remove('stick-off');
     stickDOMelement.classList.add('stick-on');
