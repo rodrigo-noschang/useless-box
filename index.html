@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/robot-head.css">
     <link rel="stylesheet" href="./styles/robot-body.css">
     <link rel="stylesheet" href="./styles/robot-arm.css">
+    <link rel="stylesheet" href="./styles/robot-wheel.css">
     <script defer src = './scripts/switchScript.js'></script>
     <title>Document</title>
 </head>
@@ -50,7 +51,7 @@
                 </div>
             </div>
 
-            <div class="robot-body">
+            <div class = "robot-body">
                 <div class="chest-piece"></div>
                 <div class="smaller-chest-piece"></div>
 
@@ -63,6 +64,18 @@
                         <div class="hand-part bottom-hand-part"></div>
                     </div>
                 </div>
+            </div>
+
+            <div class="robot-wheels">
+                <svg viewBox = '0 0 100 30'>
+                    <path d = "m 20 4 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -20"
+                          stroke-width = '5'
+                          fill = 'none'
+                          stroke = '#666'
+                          class = 'wheel-treadmill'>
+                  </svg>
+                <div class = 'wheel left-wheel'></div>
+                <div class = 'wheel right-wheel'></div>
             </div>
 
         </div>

@@ -10,13 +10,12 @@
 }
 
 /* ============= Robot Arm ========== */
-
 .articulation {
     position: absolute;
     width: 100px;
     height: 20px;
     border: 2px solid black;
-    left: 100%;
+    left: calc(100% + 5px);
     top: 30px;
     border-radius: 0 4px 4px 0;
     background-color: #bbb;
@@ -27,7 +26,7 @@
     height: 45px;
     position: absolute;
     top: 12px;
-    left: calc(100% + 102px);
+    left: calc(100% + 110px);
 }
 
 .hand-part {

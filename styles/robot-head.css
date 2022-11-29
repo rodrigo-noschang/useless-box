@@ -1,5 +1,4 @@
 .robot {
-    border: 1px solid black;
     width: 300px;
     position: absolute;
     top: 50%;
@@ -11,10 +10,9 @@
 
 .robot-head {
     border: 2px solid black;
-    border-bottom: 0;
     width: 100px;
     height: 100px;
-    margin: 0 auto;
+    margin: 0 auto 5px;
     position: relative;
     padding: 10px;
     display: flex;
