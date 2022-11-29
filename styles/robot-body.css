@@ -1,0 +1,19 @@
+.robot-body {
+    width: 160px;
+    height: 160px;
+    background-color: #bbb;
+    border: 2px solid black;
+    margin: -2px auto 0;
+    padding: 35px 30px 0;
+}
+
+.chest-piece, .smaller-chest-piece {
+    height: 30px;
+    background-color: red;
+    box-shadow: 0 0 5px 0px red
+}
+
+.smaller-chest-piece {
+    width: 30px;
+    margin: 0 auto;
+}
