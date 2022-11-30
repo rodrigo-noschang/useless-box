@@ -7,6 +7,9 @@ const joyStick = {
 }
 
 const turnOn = () => {
+    // Stops user from turning it off manually
+    // stickDOMelement.removeEventListener('click', switchGameState);
+
     stickDOMelement.classList.remove('stick-off');
     stickDOMelement.classList.add('stick-on');
     joyStick.state = 'on';
@@ -18,14 +21,14 @@ const turnOn = () => {
 }
 
 const turnOff = () => {
+    // stickDOMelement.addEventListener('click', switchGameState);
+    
     stickDOMelement.classList.add('stick-off');
     stickDOMelement.classList.remove('stick-on');
     joyStick.state = 'off';
 
     // Turn led off
-    setTimeout(() => {
-        led.classList.remove('led-turn-on');
-    }, 200)
+    led.classList.remove('led-turn-on');
 }
 
 const switchGameState = () => {

@@ -1,0 +1,19 @@
+@keyframes moveArmForwards {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(100px)
+    }
+}
+
+@keyframes moveArmBackwards {
+    0% {
+        transform: translateX(100px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}

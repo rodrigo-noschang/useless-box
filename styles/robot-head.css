@@ -1,9 +1,20 @@
+/* .start-animation {
+    position: absolute; 
+    bottom: 30px;
+    background-color: lightcoral;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.start-animation:hover ~ .robot{
+    animation: moveRobotForwards 2s ease-in-out forwards;
+} */
+
 .robot {
     width: 300px;
     position: absolute;
     top: 50%;
-    left: 480px;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 }
 
 /* ========== Robot Head =========== */

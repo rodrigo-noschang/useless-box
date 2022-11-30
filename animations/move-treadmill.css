@@ -1,0 +1,19 @@
+@keyframes moveTreadmillForwards {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -100;
+    }
+}
+
+@keyframes moveTreadmillBackwards {
+    0% {
+        stroke-dashoffset: -100;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
