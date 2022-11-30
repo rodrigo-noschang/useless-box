@@ -8,6 +8,13 @@
     top: 30px;
     border-radius: 0 4px 4px 0;
     background-color: #bbb;
+    z-index: 2;
+}
+
+.second-articulation {
+    height: 15px;
+    z-index: 1;
+    top: 32px;
 }
 
 .hand {
