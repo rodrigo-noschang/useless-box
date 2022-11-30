@@ -1,26 +1,35 @@
 const stickDOMelement = document.querySelector('.stick');
 const led = document.querySelector('.led');
 
-const TIME = 2;
+let TIME = 2;
 const joyStick = {
     state: 'off',
     switches: 0
+}
+
+const setAnimationTime = () => {
+    if (joyStick.switches == 2) TIME = 1.2;
+
+    if (joyStick.switches == 4) TIME = .6;
 }
 
 const turnOn = () => {
     // Stops user from turning it off manually
     stickDOMelement.removeEventListener('click', switchGameState);
 
+    // Defines how fast the animation is going to run
+    setAnimationTime();
+
     stickDOMelement.classList.remove('stick-off');
     stickDOMelement.classList.add('stick-on');
-    joyStick.state = 'on';
     joyStick.switches++;
-
+    joyStick.state = 'on';
+    
     // turn led on after a few miliseconds
     setTimeout(() => {
         led.classList.add('led-turn-on');
     }, 200)
-
+    
     // Play the robot moving animation after a litte while
     setTimeout(() => {
         moveRobotToStick(TIME);
@@ -29,8 +38,6 @@ const turnOn = () => {
 }
 
 const turnOff = () => {
-    stickDOMelement.addEventListener('click', switchGameState);
-    
     stickDOMelement.classList.add('stick-off');
     stickDOMelement.classList.remove('stick-on');
     joyStick.state = 'off';
@@ -40,6 +47,11 @@ const turnOff = () => {
 
     setTimeout(() => {
         moveRobotAwayFromStick(TIME);
+
+        // Once the animation is done running, user can turn it on again
+        setTimeout(() => {
+            stickDOMelement.addEventListener('click', switchGameState);
+        }, (TIME + TIME / 2) * 1000)
     }, 500);
 }
 
