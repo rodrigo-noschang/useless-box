@@ -12,8 +12,8 @@
 
 .chest-piece, .smaller-chest-piece {
     height: 30px;
-    background-color: red;
-    box-shadow: 0 0 5px 0px red
+    background-color: var(--mood-color);
+    box-shadow: 0 0 5px 0px var(--mood-color);
 }
 
 .smaller-chest-piece {

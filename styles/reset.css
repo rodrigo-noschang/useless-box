@@ -4,3 +4,10 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+:root {
+    --mood-color: #43ad34; 
+    /* --green: #43ad34;
+    --yellow: #c4d61a;
+    --red: #ff0000; */
+}
