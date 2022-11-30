@@ -7,10 +7,16 @@ const joyStick = {
     switches: 0
 }
 
-const setAnimationTime = () => {
-    if (joyStick.switches == 2) TIME = 1.2;
+const setAnimationTimeAndEyeBrows = () => {
+    if (joyStick.switches == 2) {
+        TIME = 1;
+        setTiredEyebrows();
+    }
 
-    if (joyStick.switches == 4) TIME = .6;
+    if (joyStick.switches == 4) {
+        TIME = .5;
+        setMadEyes();
+    }
 }
 
 const turnOn = () => {
@@ -18,7 +24,7 @@ const turnOn = () => {
     stickDOMelement.removeEventListener('click', switchGameState);
 
     // Defines how fast the animation is going to run
-    setAnimationTime();
+    setAnimationTimeAndEyeBrows();
 
     stickDOMelement.classList.remove('stick-off');
     stickDOMelement.classList.add('stick-on');

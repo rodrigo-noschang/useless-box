@@ -1,15 +1,3 @@
-/* .start-animation {
-    position: absolute; 
-    bottom: 30px;
-    background-color: lightcoral;
-    cursor: pointer;
-    padding: 15px;
-}
-
-.start-animation:hover ~ .robot{
-    animation: moveRobotForwards 2s ease-in-out forwards;
-} */
-
 .robot {
     width: 300px;
     position: absolute;
@@ -76,17 +64,15 @@
     background-color: #fff;
 }
 
-/* .eye::after {
-    content: '';
+.eyebrows {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: black;
-} */
+    top: -6px;
+    left:  -2px;
+    width: calc(100% + 10px);
+    height: 15px;
+    background-color: #bbb;
+    display: none;
+}
 
 .mouth {
     height: 30px;
