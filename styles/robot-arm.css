@@ -28,6 +28,7 @@
     position: absolute;
     top: 12px;
     left: calc(100% + 110px);
+    z-index: 100;
 }
 
 .hand-part {

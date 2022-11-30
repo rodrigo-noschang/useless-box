@@ -75,7 +75,7 @@ h1 {
     transform-origin: bottom;
     border-top: 30px solid red;
     box-sizing: content-box;
-    transition: transform .4s;
+    transition: transform 1s;
     box-shadow: 0 0 5px 0 #000;
 }
 
@@ -100,12 +100,12 @@ h1 {
 
 .stick-off {
     transform: translateX(100%) rotateZ(30deg);
-    transition: .4s;
+    transition: .6s;
 }
 
 .stick-on {
     transform: translateX(-150%) rotateZ(-30deg);
-    transition: .4s;
+    transition: .6s;
 }
 
 .stick-base-depth {
