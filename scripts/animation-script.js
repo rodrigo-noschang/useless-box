@@ -30,7 +30,7 @@ const extendRobotArm = (animationTime) => {
     robotHand.style.animation = `moveArmForwards ${animationTime / 2}s ease-in-out forwards`;
 
     // Waits for the arm to fully extend, then turns the stick off
-    setTimeout(turnOff, animationInMiliseconds / 2 - 100);
+    setTimeout(turnOff, animationInMiliseconds / 2 - animationInMiliseconds * .1);
 }
 
 const moveRobotAwayFromStick = (animationTime) => {

@@ -1,7 +1,7 @@
 const stickDOMelement = document.querySelector('.stick');
 const led = document.querySelector('.led');
 
-let TIME = 2;
+let TIME = 2.5;
 const joyStick = {
     state: 'off',
     switches: 0

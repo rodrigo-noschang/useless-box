@@ -17,7 +17,7 @@ h1 {
     height: 150px;
     width: 350px;
     border-radius: 20px;
-    transform: rotateX(50deg) translate(-50%, -50%);
+    transform: rotateX(50deg) translateY(-50%);
     display:flex;
     align-items: center;
     z-index: 2;
@@ -114,7 +114,7 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: rotateX(50deg) translate(-50%, -44%);
+    transform: rotateX(50deg) translateY(-44%);
     z-index: 1;
     border-radius: 20px;
     background-color: grey;

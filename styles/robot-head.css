@@ -3,6 +3,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    left: 100px;
     z-index: 2;
 }
 

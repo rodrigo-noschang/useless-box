@@ -4,13 +4,13 @@
     }
 
     100% {
-        transform: translate(310px, -50%);    
+        transform: translate(385px, -50%);    
     }
 }
 
 @keyframes moveRobotBackwards {
     0% {
-        transform: translate(310px, -50%);
+        transform: translate(385px, -50%);
     }
 
     100% {
