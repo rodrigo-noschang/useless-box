@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./styles/robot-body.css">
     <link rel="stylesheet" href="./styles/robot-arm.css">
     <link rel="stylesheet" href="./styles/robot-wheel.css">
+    <link rel="stylesheet" href="./styles/wall.css">
 
     
     <script defer src = './scripts/mood-styling.js'></script>
@@ -33,63 +34,66 @@
             <div class = 'led'></div>
         </div>
         <div class = 'stick-base-depth'></div>
-
+        
+        
         <div class = 'robot'>
             <div class = 'robot-head'>
                 <div class="anthena left-anthena"></div>
-                <div class="anthena right-anthena"></div>
+                    <div class="anthena right-anthena"></div>
 
-                <div class="eye-line">
-                    <div class="eye">
-                        <div class="eyebrows left-eyebrow"></div>
+                    <div class="eye-line">
+                        <div class="eye">
+                            <div class="eyebrows left-eyebrow"></div>
+                        </div>
+                        <div class="eye">
+                            <div class="eyebrows right-eyebrow"></div>
+                        </div>
                     </div>
-                    <div class="eye">
-                        <div class="eyebrows right-eyebrow"></div>
+
+                    <div class="mouth">
+                        <div class="top-teeth">
+                            <div class="teeth"></div>
+                            <div class="teeth"></div>
+                            <div class="teeth"></div>
+                        </div>
+
+                        <div class="bottom-teeth">
+                            <div class="teeth"></div>
+                            <div class="teeth"></div>
+                            <div class="teeth"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "robot-body">
+                    <div class="chest-piece"></div>
+                    <div class="smaller-chest-piece"></div>
+
+                    <div class="robot-arm">
+                        <div class="articulation first-articulation"></div>
+                        <div class="articulation second-articulation"></div>
+        
+                        <div class="hand">
+                            <div class="hand-part top-hand-part"></div>
+                            <div class="hand-part bottom-hand-part"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="mouth">
-                    <div class="top-teeth">
-                        <div class="teeth"></div>
-                        <div class="teeth"></div>
-                        <div class="teeth"></div>
-                    </div>
-
-                    <div class="bottom-teeth">
-                        <div class="teeth"></div>
-                        <div class="teeth"></div>
-                        <div class="teeth"></div>
-                    </div>
+                <div class="robot-wheels">
+                    <svg viewBox = '0 0 100 30'>
+                        <path d = "m 20 4 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -20"
+                            stroke-width = '5'
+                            fill = 'none'
+                            stroke = '#666'
+                            class = 'wheel-treadmill'>
+                    </svg>
+                    <div class = 'wheel left-wheel'></div>
+                    <div class = 'wheel right-wheel'></div>
                 </div>
-            </div>
-
-            <div class = "robot-body">
-                <div class="chest-piece"></div>
-                <div class="smaller-chest-piece"></div>
-
-                <div class="robot-arm">
-                    <div class="articulation first-articulation"></div>
-                    <div class="articulation second-articulation"></div>
-    
-                    <div class="hand">
-                        <div class="hand-part top-hand-part"></div>
-                        <div class="hand-part bottom-hand-part"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="robot-wheels">
-                <svg viewBox = '0 0 100 30'>
-                    <path d = "m 20 4 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -20"
-                          stroke-width = '5'
-                          fill = 'none'
-                          stroke = '#666'
-                          class = 'wheel-treadmill'>
-                  </svg>
-                <div class = 'wheel left-wheel'></div>
-                <div class = 'wheel right-wheel'></div>
-            </div>
         </div>
+
+        <div class = 'wall'></div>
     </div>
 </body>
 </html>

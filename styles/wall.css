@@ -1,0 +1,9 @@
+.wall {
+    width: 380px;
+    height: 600px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: relative;
+    z-index: 5;
+    margin-left: 10px;
+}
