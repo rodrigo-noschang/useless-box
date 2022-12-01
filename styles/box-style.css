@@ -4,20 +4,26 @@ h1 {
 }
 
 .stick-container {
+    border: 1px solid red;
     width: 100vw;
     height: 100vh;
-    position: relative;
+    position: absolute;
+    width: 510px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(0px, -50%);
 }
 
 .stick-base {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 0;
     background-color: grey;
     height: 150px;
     width: 350px;
     border-radius: 20px;
-    transform: rotateX(50deg) translateY(-50%);
+    transform: rotateX(50deg) translate(0, -50%);
     display:flex;
     align-items: center;
     z-index: 2;
@@ -113,8 +119,8 @@ h1 {
     width: 350px;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: rotateX(50deg) translateY(-44%);
+    left: 0;
+    transform: rotateX(50deg) translate(0, -44%);
     z-index: 1;
     border-radius: 20px;
     background-color: grey;

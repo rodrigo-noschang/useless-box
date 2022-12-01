@@ -1,5 +1,6 @@
 const stickDOMelement = document.querySelector('.stick');
 const led = document.querySelector('.led');
+const stickSurroundings = document.querySelector('.stick-container');
 
 let TIME = 2.5;
 const joyStick = {
@@ -71,3 +72,4 @@ const switchGameState = () => {
 }
 
 stickDOMelement.addEventListener('click', switchGameState);
+stickSurroundings.addEventListener('mousemove', calculateCursorDistanceFromStick);

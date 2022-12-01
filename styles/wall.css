@@ -5,4 +5,5 @@
     position: relative;
     z-index: 5;
     margin-left: 10px;
+    box-shadow: 3px 0 15px 0 black;
 }
