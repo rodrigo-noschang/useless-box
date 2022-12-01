@@ -4,14 +4,21 @@ const robotHand = document.querySelector('.hand');
 const robotTreadmill = document.querySelector('.wheel-treadmill');
 
 const moveRobotToStick = (animationTime) => {
-    const animationInMiliseconds = animationTime * 1000;
+    let animationInMiliseconds = 0;
+    // Robot is going to stay next to the box from switches 7 to eleven. So in this interval, he is not gonna move forwards.
+    const isRobotisMoving = joyStick.switches <= 7 || joyStick.switches >= 11;
 
-    if (joyStick.switches <= 8 || joyStick.switches >= 10) {
+    if (isRobotisMoving) {
         robot.style.animation = `moveRobotForwards ${animationTime}s ease-in-out forwards`;
         robotTreadmill.style.animation = `moveTreadmillForwards ${animationTime}s ease-in-out forwards`;
+        animationInMiliseconds = animationTime * 1000;
     }
+
     // Waits for the robot to move to the stick, so it can extend it's arm
     setTimeout(() => {
+        // If he is stopped by the box, he is gonna move his hand faster
+        if (!isRobotisMoving) animationTime = 0.25;
+
         extendRobotArm(animationTime);
     }, animationInMiliseconds)
 }
@@ -27,7 +34,10 @@ const extendRobotArm = (animationTime) => {
 }
 
 const moveRobotAwayFromStick = (animationTime) => {
-    if (joyStick.switches <= 7 || joyStick.switches >= 11) {
+    // Robot is going to be next to the box from switches 7 to 11, so he is not comming back in those intervals
+    const isRobotisMoving = joyStick.switches <= 6 || joyStick.switches >= 10
+    
+    if (isRobotisMoving) {
         robot.style.animation = `moveRobotBackwards ${animationTime}s ease-in-out forwards`;
         robotTreadmill.style.animation = `moveTreadmillBackwards ${animationTime}s ease-in-out forwards`;
     }
