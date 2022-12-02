@@ -3,24 +3,41 @@ const robotArm = document.querySelector('.second-articulation');
 const robotHand = document.querySelector('.hand');
 const robotTreadmill = document.querySelector('.wheel-treadmill');
 
+const removeAllAnimations = () => {
+    robot.style.animation = '';
+    robotTreadmill.style.animation = '';
+    robotArm.style.animation = '';
+    robotHand.style.animation = '';
+}
+
+const resetRobotPosition = () => {
+    robot.style.animation = '';
+    robot.style.transform = 'translate(0px, -50%) rotateZ(0)';
+    robot.style.transition = '.5s';
+}
+
 const moveRobotToStick = (animationTime) => {
+    resetRobotPosition();
+
     let animationInMiliseconds = 0;
     // Robot is going to stay next to the box from switches 7 to eleven. So in this interval, he is not gonna move forwards.
     const isRobotisMoving = joyStick.switches <= 7 || joyStick.switches >= 11;
 
-    if (isRobotisMoving) {
-        robot.style.animation = `moveRobotForwards ${animationTime}s ease-in-out forwards`;
-        robotTreadmill.style.animation = `moveTreadmillForwards ${animationTime}s ease-in-out forwards`;
-        animationInMiliseconds = animationTime * 1000;
-    }
-
-    // Waits for the robot to move to the stick, so it can extend it's arm
     setTimeout(() => {
-        // If he is stopped by the box, he is gonna move his hand faster
-        if (!isRobotisMoving) animationTime = 0.25;
-
-        extendRobotArm(animationTime);
-    }, animationInMiliseconds)
+        if (isRobotisMoving) {
+            robot.style.animation = `moveRobotForwards ${animationTime}s ease-in-out forwards`;
+            robotTreadmill.style.animation = `moveTreadmillForwards ${animationTime}s ease-in-out forwards`;
+            animationInMiliseconds = animationTime * 1000;
+        }
+    
+        // Waits for the robot to move to the stick, so it can extend it's arm
+        setTimeout(() => {
+            // If he is stopped by the box, he is gonna move his hand faster
+            if (!isRobotisMoving) animationTime = 0.25;
+    
+            extendRobotArm(animationTime);
+        }, animationInMiliseconds)
+    }, 600)
 }
 
 const extendRobotArm = (animationTime) => {
@@ -48,4 +65,8 @@ const moveRobotAwayFromStick = (animationTime) => {
 const retrieveRobotArm = (animationTime) => {
     robotArm.style.animation = `moveArmBackwards ${animationTime / 2}s ease-in-out forwards`;
     robotHand.style.animation = `moveArmBackwards ${animationTime / 2}s ease-in-out forwards`;
+
+    setTimeout(() => {
+        removeAllAnimations();
+    }, animationTime * 1000);
 }

@@ -72,4 +72,3 @@ const switchGameState = () => {
 }
 
 stickDOMelement.addEventListener('click', switchGameState);
-stickSurroundings.addEventListener('mousemove', calculateCursorDistanceFromStick);
