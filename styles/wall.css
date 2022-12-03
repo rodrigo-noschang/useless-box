@@ -7,3 +7,25 @@
     margin-left: 10px;
     box-shadow: 3px 0 15px 0 black;
 }
+
+.second-head {
+    position: absolute;
+    left: 270px;
+    top: 35%;
+    transform: translateX(40px) rotateZ(35deg);
+    z-index: 1;
+}
+
+.second-head .eyebrows {
+    display: block;
+}
+
+.second-head .left-eyebrow {
+    height: 10px;
+    transform: rotateZ(45deg) translate(9px, 2px);
+}
+
+.second-head .right-eyebrow {
+    height: 10px;
+    transform: rotateZ(-45deg) translate(-10px, -2px);
+}

@@ -2,7 +2,7 @@ const stickDOMelement = document.querySelector('.stick');
 const led = document.querySelector('.led');
 const stickSurroundings = document.querySelector('.stick-container');
 
-let TIME = 2.5;
+let TIME = 2;
 const joyStick = {
     state: 'off',
     switches: 0
@@ -42,7 +42,7 @@ const turnOn = () => {
     // Play the robot moving animation after a litte while
     setTimeout(() => {
         moveRobotToStick(TIME);
-    }, 500)
+    }, 300)
 
 }
 
