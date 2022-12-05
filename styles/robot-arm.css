@@ -71,3 +71,15 @@
     left: 19px;
     bottom: 8px;
 }
+
+.rasengan {
+    position: absolute;
+    top: -15px;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+    transform: scale(0);
+    border-radius: 50%;
+    background-image: radial-gradient(white 20%, #9be8f7);
+    box-shadow: 0 0 12px 0 #4d86f6;
+}

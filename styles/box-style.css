@@ -125,3 +125,12 @@ h1 {
     background-color: grey;
     border: 2px solid black;
 }
+
+.fire-gif {
+    position: absolute;
+    width: 350px;
+    height: 220px;
+    top: 85px;
+    transform: scaleY(0);
+    z-index: 10;
+}

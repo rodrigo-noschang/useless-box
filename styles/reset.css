@@ -11,3 +11,7 @@
     --yellow: #c4d61a;
     --red: #ff0000; */
 }
+
+.hidden {
+    display: none;
+}

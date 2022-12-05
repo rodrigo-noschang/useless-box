@@ -21,7 +21,6 @@ const setMadEyebrows = () => {
 // Change the color variable value to yellow and then red.
 const changeAnthenaAndBodyColors = (switchCount) => {
     if (switchCount < 2) return;
-    // const rootStyle = getComputedStyle(root);
 
     if (switchCount >= 2) root.style.setProperty('--mood-color', MOOD_YELLOW);
 

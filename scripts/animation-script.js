@@ -2,6 +2,8 @@ const robot = document.querySelector('.robot');
 const robotArm = document.querySelector('.second-articulation');
 const robotHand = document.querySelector('.hand');
 const robotTreadmill = document.querySelector('.wheel-treadmill');
+const rasengan = document.querySelector('.rasengan');
+const fire = document.querySelector('.fire-gif');
 
 const moveRobotToStick = (animationTime) => {
     // Deactivates all the hovering part, so that the second head is not shown (functionality that appears on 13th to 16th time the switch is clicked)
@@ -57,5 +59,30 @@ const retrieveRobotArm = (animationTime) => {
     if (joyStick.switches >= 12 && joyStick.switches <= 15) {
         setTimeout(activateHeadPeeking, (animationTime) * 1000);
     }
+}
+
+const endAnimation = (animationTime) => {
+    animationTime = .5;
+    const animationTimeInMiliseconds = (animationTime * 2) * 1000;
     
+    robotArm.style.animation = `moveArmForwards ${animationTime * 2}s ease-in-out forwards`;
+    robotHand.style.animation = `moveArmForwards ${animationTime * 2}s ease-in-out forwards`;
+
+    setTimeout(() => {
+        rasengan.style.animation = `rasengan ${animationTime * 6}s ease-out forwards`
+
+        setTimeout(() => {
+            robotArm.style.animation = `moveArmBackwards ${animationTime * 2}s ease-in-out forwards`;
+            robotHand.style.animation = `moveArmBackwards ${animationTime * 2}s ease-in-out forwards`;
+
+            fire.style.transformOrigin = 'bottom';
+            fire.style.transform = 'scaleY(1)';
+            fire.style.transition = '.3s';
+        }, animationTimeInMiliseconds * 3);
+
+        setTimeout(() => {
+            turnOff();
+        }, animationTimeInMiliseconds * 2.9);
+
+    }, animationTimeInMiliseconds);
 }

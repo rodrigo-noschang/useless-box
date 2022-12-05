@@ -1,0 +1,29 @@
+@keyframes rasengan {
+    0% {
+        transform: scale(0);
+    }
+
+    35% {
+        transform: scale(1);
+    }
+
+    55% {
+        transform: scale(1) translateX(0px);
+    }
+
+    70% {
+        transform: scale(1) translateX(400px);
+    }
+    
+    72% {
+        transform: scale(1) translateX(400px);
+    }
+
+    95% {
+        transform: scale(3) translateX(180px);
+    }
+
+    100% {
+        transform: scale(0) translateX(4000px);
+    }
+}

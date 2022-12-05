@@ -39,10 +39,15 @@ const turnOn = () => {
         led.classList.add('led-turn-on');
     }, 200)
     
-    // Play the robot moving animation after a litte while
-    setTimeout(() => {
-        moveRobotToStick(TIME);
-    }, 300)
+    if (joyStick.switches === 2) {
+        endAnimation(TIME);
+    } else {
+        // Play the robot moving animation after a litte while
+        setTimeout(() => {
+            moveRobotToStick(TIME);
+        }, 300)
+    }
+
 
 }
 
