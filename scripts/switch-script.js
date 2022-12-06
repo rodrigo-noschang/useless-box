@@ -48,8 +48,6 @@ const turnOn = () => {
             moveRobotToStick(TIME);
         }, 300)
     }
-
-
 }
 
 const turnOff = () => {
