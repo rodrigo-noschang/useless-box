@@ -39,7 +39,8 @@ const turnOn = () => {
         led.classList.add('led-turn-on');
     }, 200)
     
-    if (joyStick.switches === 2) {
+    // Animations are over
+    if (joyStick.switches === 15) {
         endAnimation(TIME);
     } else {
         // Play the robot moving animation after a litte while
@@ -52,6 +53,9 @@ const turnOn = () => {
 }
 
 const turnOff = () => {
+    // Animations are over
+    if (joyStick.switches === 15) return;
+
     stickDOMelement.classList.add('stick-off');
     stickDOMelement.classList.remove('stick-on');
     joyStick.state = 'off';

@@ -1,29 +1,43 @@
 @keyframes rasengan {
-    0% {
+    0%, 20% {
         transform: scale(0);
     }
 
-    35% {
+    60% {
         transform: scale(1);
     }
 
-    55% {
+    75% {
         transform: scale(1) translateX(0px);
     }
-
-    70% {
-        transform: scale(1) translateX(400px);
-    }
     
-    72% {
+    99% {
         transform: scale(1) translateX(400px);
-    }
-
-    95% {
-        transform: scale(3) translateX(180px);
     }
 
     100% {
-        transform: scale(0) translateX(4000px);
+        transform: scale(0) translateX(400px);
     }
+}
+
+@keyframes rasenganExplosion {
+    0%, 100% {
+        transform: translate(0, -50%);
+    }
+    
+    40% {
+        transform: translate(0, -51%);
+    }
+
+    55% {
+        transform: translate(0, -49%);
+    }
+
+    70% {
+        transform: translate(0, -51%);
+    }
+    
+    85% {
+        transform: translate(0, -49%);
+    } 
 }

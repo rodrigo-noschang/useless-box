@@ -4,8 +4,6 @@ h1 {
 }
 
 .stick-container {
-    width: 100vw;
-    height: 100vh;
     position: absolute;
     width: 510px;
     height: 460px;

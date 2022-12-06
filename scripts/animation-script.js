@@ -1,4 +1,5 @@
 const robot = document.querySelector('.robot');
+const stickContainer = document.querySelector('.stick-container')
 const robotArm = document.querySelector('.second-articulation');
 const robotHand = document.querySelector('.hand');
 const robotTreadmill = document.querySelector('.wheel-treadmill');
@@ -55,8 +56,8 @@ const retrieveRobotArm = (animationTime) => {
     robotArm.style.animation = `moveArmBackwards ${animationTime / 2}s ease-in-out forwards`;
     robotHand.style.animation = `moveArmBackwards ${animationTime / 2}s ease-in-out forwards`;
     
-    // Reactivates head peeking in rounds 13th to 16th after the retrieval of the arm animation is done running
-    if (joyStick.switches >= 12 && joyStick.switches <= 15) {
+    // Reactivates head peeking in rounds 11th to 14th after the retrieval of the arm animation is done running
+    if (joyStick.switches >= 10 && joyStick.switches <= 13) {
         setTimeout(activateHeadPeeking, (animationTime) * 1000);
     }
 }
@@ -74,6 +75,9 @@ const endAnimation = (animationTime) => {
         setTimeout(() => {
             robotArm.style.animation = `moveArmBackwards ${animationTime * 2}s ease-in-out forwards`;
             robotHand.style.animation = `moveArmBackwards ${animationTime * 2}s ease-in-out forwards`;
+
+            stickContainer.style.animation = 'rasenganExplosion .3s';
+            robot.style.animation = 'rasenganExplosion .3s';
 
             fire.style.transformOrigin = 'bottom';
             fire.style.transform = 'scaleY(1)';
