@@ -69,6 +69,7 @@ const endAnimation = (animationTime) => {
     robotArm.style.animation = `moveArmForwards ${animationTime * 2}s ease-in-out forwards`;
     robotHand.style.animation = `moveArmForwards ${animationTime * 2}s ease-in-out forwards`;
 
+
     setTimeout(() => {
         rasengan.style.animation = `rasengan ${animationTime * 6}s ease-out forwards`
 
@@ -76,14 +77,17 @@ const endAnimation = (animationTime) => {
             robotArm.style.animation = `moveArmBackwards ${animationTime * 2}s ease-in-out forwards`;
             robotHand.style.animation = `moveArmBackwards ${animationTime * 2}s ease-in-out forwards`;
 
+            // Shake the stick and the robot when the "rasengan" hits the stick
             stickContainer.style.animation = 'rasenganExplosion .3s';
             robot.style.animation = 'rasenganExplosion .3s';
 
+            // Show fire gif
             fire.style.transformOrigin = 'bottom';
             fire.style.transform = 'scaleY(1)';
             fire.style.transition = '.3s';
         }, animationTimeInMiliseconds * 3);
 
+        // Waits a little bit to turn the stick off, enough time to run the explosion and the fire
         setTimeout(() => {
             turnOff();
         }, animationTimeInMiliseconds * 2.9);
